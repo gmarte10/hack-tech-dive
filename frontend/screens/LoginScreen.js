@@ -44,12 +44,6 @@ const LoginScreen = ({ navigation }) => {
             <Text style={styles.logo}>Pinterest</Text>
             <Text variant="headlineMedium" style={styles.title}>Welcome Back</Text>
             {error ? <Text style={styles.error}>{error}</Text> : null}
-            <Text style={styles.testCredentials}>
-              Test credentials:{'\n'}
-              Email: john@example.com{'\n'}
-              Password: password123{'\n\n'}
-              Note: Enter the password without any prefix
-            </Text>
           </View>
         </TouchableWithoutFeedback>
 
@@ -150,13 +144,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 16,
     fontWeight: '500',
-  },
-  testCredentials: {
-    textAlign: 'center',
-    marginBottom: 24,
-    color: '#666',
-    fontSize: 14,
-    lineHeight: 20,
   },
 });
 
