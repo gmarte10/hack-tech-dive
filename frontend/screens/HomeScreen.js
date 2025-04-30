@@ -8,6 +8,7 @@ import { pinsAPI } from '../services/api';
 const { width } = Dimensions.get('window');
 const numColumns = 2;
 const pinWidth = (width - 48) / numColumns; // 48 = padding (16) * 2 + gap (16)
+const fallbackPinImage = require('../assets/favicon.png'); // <--- ADJUST PATH AS NEEDED
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -86,6 +87,8 @@ const HomeScreen = () => {
           value={searchQuery}
           style={styles.searchBar}
           iconColor="#E60023"
+          inputStyle={styles.searchInputText}
+          placeholderTextColor="#696969"
         />
         <Menu
           visible={menuVisible}
@@ -163,6 +166,11 @@ const styles = StyleSheet.create({
     marginRight: 8,
     backgroundColor: '#f5f5f5',
     elevation: 0,
+  },
+  searchInputText: { // Style specifically for the input text
+    color: '#333333', // <--- Set desired text color here
+    fontSize: 16,     // <--- Example: set font size if needed
+    // Add other TextInput styles here if necessary
   },
   centered: {
     flex: 1,
